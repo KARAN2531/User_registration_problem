@@ -48,10 +48,15 @@ def validate_mobile(mobile):
 # UC5 - Rule1:  Minimum 8 characters
 # UC6 - Rule2:  Should have atleast 1 Uppercase
 # UC7 - Rule3:  Should have atleast 1 numeric number in the password
+# UC8 - Rule4:  Has exactly 1 Special character
 
 def validate_password(password):
-    pattern = r'^(?=.*[A-Z])(?=.*\d).{8,}$'
+
+    pattern = r'^(?=(?:[^@#$%^&+=]*[@#$%^&+=][^@#$%^&+=]*))(?=.*[A-Z])(?=.*\d)[A-Za-z\d@#$%^&+=]{8,}$'
+
     if re.match(pattern, password):
         return True
     else:
-        return ("Invalid: Password must have at least 8 characters")
+        return ("Invalid: Password must be at least 8 characters, "
+                "contain at least one uppercase letter, one digit, "
+                "and exactly one special character (@#$%^&+=).")
