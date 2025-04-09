@@ -12,7 +12,6 @@ def valid_first_name(first_name):
         return "Invalid: minimum 3 characters are required"
 
 
-<<<<<<< HEAD
 # UC2 - As a User need to enter a valid Last Name
 # Rule: Last name starts with Cap and has minimum 3 characters
 
@@ -21,7 +20,8 @@ def valid_last_name(last_name):
         return True
     else:
         return "Invalid: minimum 3 characters are required"
-=======
+
+
 # UC3 - As a User need to enter a valid email
 # Rule: Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in) with precise @ and . positions
 
@@ -30,5 +30,16 @@ def validate_email(email):
         return True
     else:
         return "Invalid: Not a valid email ID"
+
     
->>>>>>> use_case_3
+# UC4 - As a User need to follow pre-defined Mobile Format
+# E.g. 91 9919819801 
+# Country code follow by space and 10 digit number
+
+def validate_mobile(mobile):
+    pattern = r'^[0-9]{2}\s[0-9]{10}$'
+    if re.match(pattern, mobile):
+        return True
+    else:
+        return "Invalid: Mobile number must be in format '91 1234567890'"
+
