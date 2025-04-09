@@ -47,6 +47,7 @@ def validate_mobile(mobile):
 # As a user needs to follow pre-defined Password rules.
 # UC5 - Rule1:  Minimum 8 characters
 # UC6 - Rule2:  Should have atleast 1 Uppercase
+# UC7 - Rule3:  Should have atleast 1 numeric number in the password
 
 def validate_password(password):
     pattern = r'^(?=.*[A-Z])(?=.*\d).{8,}$'
