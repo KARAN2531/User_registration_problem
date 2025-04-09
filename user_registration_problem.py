@@ -49,6 +49,7 @@ def validate_mobile(mobile):
 # UC6 - Rule2:  Should have atleast 1 Uppercase
 # UC7 - Rule3:  Should have atleast 1 numeric number in the password
 # UC8 - Rule4:  Has exactly 1 Special character
+# UC9 - Rule5:  Should clear all email samples provided seperately
 
 def validate_password(password):
 
@@ -60,3 +61,15 @@ def validate_password(password):
         return ("Invalid: Password must be at least 8 characters, "
                 "contain at least one uppercase letter, one digit, "
                 "and exactly one special character (@#$%^&+=).")
+
+
+first_name = input("Enter your first name: ")
+print(valid_first_name(first_name))
+last_name = input("Enter your last name: ")
+print(valid_last_name(last_name))
+email = input("Enter your email: ")
+print(validate_email(email))
+mobile = input("Enter your phone number in format (91 9919819801) : ")
+print(validate_mobile(mobile))
+password = input("Enter your password: ")
+print(validate_password(password))
