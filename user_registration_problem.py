@@ -49,7 +49,7 @@ def validate_mobile(mobile):
 # UC6 - Rule2:  Should have atleast 1 Uppercase
 
 def validate_password(password):
-    pattern = r'^(?=.*[A-Z]).{8,}$'
+    pattern = r'^(?=.*[A-Z])(?=.*\d).{8,}$'
     if re.match(pattern, password):
         return True
     else:
