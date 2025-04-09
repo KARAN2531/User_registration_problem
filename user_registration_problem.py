@@ -43,3 +43,14 @@ def validate_mobile(mobile):
     else:
         return "Invalid: Mobile number must be in format '91 1234567890'"
 
+# As a user needs to follow pre-defined Password rules.
+# UC5 - Rule1:  Minimum 8 characters
+
+
+
+def validate_password(password):
+    pattern = r'^.{8,}$'
+    if re.match(pattern, password):
+        return True
+    else:
+        return ("Invalid: Password must have at least 8 characters")
