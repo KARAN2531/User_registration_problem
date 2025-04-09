@@ -62,14 +62,18 @@ def validate_password(password):
                 "contain at least one uppercase letter, one digit, "
                 "and exactly one special character (@#$%^&+=).")
 
+if __name__ == "__main__":
+    first_name = input("Enter your first name: ")
+    print(valid_first_name(first_name))
 
-first_name = input("Enter your first name: ")
-print(valid_first_name(first_name))
-last_name = input("Enter your last name: ")
-print(valid_last_name(last_name))
-email = input("Enter your email: ")
-print(validate_email(email))
-mobile = input("Enter your phone number in format (91 9919819801) : ")
-print(validate_mobile(mobile))
-password = input("Enter your password: ")
-print(validate_password(password))
+    last_name = input("Enter your last name: ")
+    print(valid_last_name(last_name))
+
+    email = input("Enter your email: ")
+    print(validate_email(email))
+
+    mobile = input("Enter your phone number in format (91 9919819801): ")
+    print(validate_mobile(mobile))
+
+    password = input("Enter your password: ")
+    print(validate_password(password))
